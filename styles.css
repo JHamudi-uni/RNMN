@@ -17,8 +17,14 @@ body {
     padding-bottom: 12rem;
 	display: grid;
 	place-items: center;
-	min-height: 100vh;
     align-content: space-between;
+}
+
+@media (max-width: 940px) {
+    body {
+        min-height: 85vh;
+    }
+    
 }
 
 a {
@@ -50,7 +56,6 @@ ul {
 	background: white;
 	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
 	padding: 0;
-	margin: 0;
 	border-radius: 0.1rem;
 }
 
@@ -59,21 +64,30 @@ ul {
 /* Max-Breite: 1088px */
 @media (max-width: 1024px) {
     ul {
-        width: 30rem; /* Beispiel: Ändere die Breite nach Bedarf */
+        width: 62%; 
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 792px) {
     ul {
-        width: 25rem; /* Beispiel: Ändere die Breite nach Bedarf */
+        width: 57%; /* Beispiel: Ändere die Breite nach Bedarf */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     ul {
-        width: 16rem; /* Beispiel: Ändere die Breite nach Bedarf */
+        width: 52%; /* Beispiel: Ändere die Breite nach Bedarf */
     }
 }
+
+@media (max-width: 392px) {
+    ul {
+        width: 49%; /* Beispiel: Ändere die Breite nach Bedarf */
+    }
+
+}
+
+
 
 
 
@@ -112,11 +126,12 @@ li:nth-child(3n - 1)::marker {
 
 .navbar {
     background-color: #f2f2f2;
+    margin-bottom: 10rem;
+
 }
 
 .container {
     width: 100%;
-    max-width: 1200px; /* Ändere die maximale Breite nach Bedarf */
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -127,7 +142,37 @@ li:nth-child(3n - 1)::marker {
 .navbar h1 {
     margin: 0;
     padding: 10px;
-    margin-right: 30rem;
+    margin-right: 60rem;
+}
+
+@media (max-width: 1428px) {
+    .navbar h1 {
+        margin-right: 50rem;
+    }
+}
+
+@media (max-width: 1268px) {
+    .navbar h1 {
+        margin-right: 40rem;
+    }
+}
+
+@media (max-width: 1092px) {
+    .navbar h1 {
+        margin-right: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar h1 {
+        margin-right: 10rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        margin-right: 0rem;
+    }
 }
 
 .navbar .right a {
