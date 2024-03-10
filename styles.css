@@ -1,4 +1,4 @@
-/* === ALLGEMEIN === */
+ /* === ALLGEMEIN === */
 
 * {
 	box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: cursive;
 	font-size: 1.4rem;
 	background: whitesmoke;
 	margin: 0;
@@ -31,11 +31,6 @@ a {
     font-size: 18px; 
     text-decoration: none; 
     color: #333;
-}
-
-a:hover {
-    color: skyblue;
-    font-weight: 700;
 }
 
 
@@ -90,6 +85,11 @@ li {
 	padding: 0 0 0 1rem;
 }
 
+li a:hover {
+    color: skyblue;
+    font-weight: 700;
+}
+
 li:not(:last-child) {
 	border-bottom: 1px solid lightblue;
 }
@@ -136,6 +136,10 @@ li:nth-child(3n - 1)::marker {
     margin: 0;
     padding: 10px;
     margin-right: 60rem;
+}
+
+.navbar a h1:hover {
+    color: skyblue;
 }
 
 @media (max-width: 1428px) {
