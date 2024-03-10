@@ -1,4 +1,40 @@
- /* === ALLGEMEIN === */
+.comic-neue-light {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .comic-neue-regular {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .comic-neue-bold {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .comic-neue-light-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .comic-neue-regular-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .comic-neue-bold-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+/* === ALLGEMEIN === */
 
 * {
 	box-sizing: border-box;
@@ -8,8 +44,15 @@ html {
     font-size: 16px; 
 }
 
+:root {
+    --primaere-schriftart: "Comic Neue";
+    --sekundaere-schriftart: cursive;
+    --teritaere-schriftart: sans-serif;
+  }
+
+  
 body {
-	font-family: cursive;
+    font-family: var(--primaere-schriftart, --sekundaere-schriftart, --teritaere-schriftart);
 	font-size: 1.4rem;
 	background: whitesmoke;
 	margin: 0;
@@ -38,10 +81,10 @@ a {
 
 input[type="checkbox"] {
     margin-right: 20px; 
-    margin-top: 6px;
+    margin-top: 2px;
     float: right;
-    width: 20px;
-    height: 20px;
+    height: 1.25rem;
+    width: 1.25rem;
 }
 
 ul {
@@ -83,11 +126,14 @@ ul {
 
 li {
 	padding: 0 0 0 1rem;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: 700;
 }
 
 li a:hover {
     color: skyblue;
-    font-weight: 700;
+    font-size: 19px;
 }
 
 li:not(:last-child) {
@@ -136,6 +182,7 @@ li:nth-child(3n - 1)::marker {
     margin: 0;
     padding: 10px;
     margin-right: 60rem;
+    font-size: 2.6rem;
 }
 
 .navbar a h1:hover {
@@ -176,6 +223,7 @@ li:nth-child(3n - 1)::marker {
     color: #333;
     text-decoration: none;
     padding: 10px;
+    font-weight: 700;
 }
 
 .navbar .right a:hover {
