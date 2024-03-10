@@ -9,7 +9,19 @@
 
 <body>
 
-    <h1>RNMN Übungen</h1>
+
+    <div class="navbar">
+        <div class="container">
+            <div class="left">
+                <h1>RNMN Navigation</h1>
+            </div>
+            <div class="right">
+                <a href="#">Fragen</a>
+                <a href="#">Musterlösung</a>
+            </div>
+        </div>
+    </div>
+    
     <ul>
         <li><a href="src/rnmn01.pdf" target="_blank">Übung 1</a>
             <input type="checkbox">
@@ -37,10 +49,10 @@
     </ul>
 
 
-
+    <!-- === Skript zum speichern des Checkbox Zustands === -->
 
     <script>
-        // Funktion zum Speichern des Checkbox-Zustands im Local Storage
+        // speichern des Checkbox-Zustands im Local Storage
         function saveCheckboxState() {
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
             checkboxes.forEach((checkbox, index) => {
@@ -48,7 +60,7 @@
             });
         }
 
-        // Funktion zum Laden des Checkbox-Zustands aus dem Local Storage
+        // laden des Checkbox-Zustands aus dem Local Storage
         function loadCheckboxState() {
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
             checkboxes.forEach((checkbox, index) => {
