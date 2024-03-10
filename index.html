@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>RNMN Übungen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <h1>RNMN Übungen</h1>
+    <ul>
+        <li><a href="src/rnmn01.pdf" target="_blank">Übung 1</a>
+            <input type="checkbox">
+        </li>
+        <li><a href="src/rnmn02.pdf" target="_blank">Übung 2</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn03.pdf" target="_blank">Übung 3</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn04.pdf" target="_blank">Übung 4</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn05.pdf" target="_blank">Übung 5</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn06.pdf" target="_blank">Übung 6</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn07.pdf" target="_blank">Übung 7</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn08.pdf" target="_blank">Übung 8</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn09.pdf" target="_blank">Übung 9</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn10.pdf" target="_blank">Übung 10</a>
+            <input type="checkbox"></li>
+        <li><a href="src/rnmn11.pdf" target="_blank">Übung 11</a>
+            <input type="checkbox"></li>
+    </ul>
+
+
+
+
+    <script>
+        // Funktion zum Speichern des Checkbox-Zustands im Local Storage
+        function saveCheckboxState() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox, index) => {
+                localStorage.setItem(`checkbox-${index}`, checkbox.checked);
+            });
+        }
+
+        // Funktion zum Laden des Checkbox-Zustands aus dem Local Storage
+        function loadCheckboxState() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox, index) => {
+                const checkboxState = localStorage.getItem(`checkbox-${index}`);
+                if (checkboxState !== null) {
+                    checkbox.checked = checkboxState === 'true';
+                }
+            });
+        }
+
+        // Event-Listener zum Speichern des Checkbox-Zustands beim Klicken
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('click', saveCheckboxState);
+        });
+
+        // Lade den Checkbox-Zustand, wenn die Seite geladen wird
+        window.addEventListener('load', loadCheckboxState);
+    </script>
+</body>
+
+</html>
