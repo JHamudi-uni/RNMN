@@ -49,7 +49,41 @@
                 <ul class="aufgaben-liste">
                     <li class="aufgaben-nummer">Aufgabe 1</li>
                     <li class="aufgaben-nummer">Aufgabe 2</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 5</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
                     <li class="aufgaben-nummer">Aufgabe 3</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 6</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 7</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                    <li class="aufgaben-nummer">Aufgabe 3</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 8</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                    <li class="aufgaben-nummer">Aufgabe 3</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 9</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                    <li class="aufgaben-nummer">Aufgabe 3</li>
+                    <li class="aufgaben-nummer">Aufgabe 4</li>
                 </ul>
             </li>
         </ul>
@@ -121,6 +155,7 @@
                             taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/f2446e4cd1024eb2b54e/?dl=2' type=''>";
                             taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn02.pdf' type='application/pdf'>";
                         }
+
                         // ÜBUNG 3
                           else if (exercise.querySelector('span').innerText === "Übung 3" && subExercise.innerText === "Aufgabe 1") {
                             taskDescription.innerHTML = "<p>Aufgabe 1: In zuverlässigen Multicast-Transport-Protokollen wird nicht selten sichergestellt, dass die <br> Nachrichten bei den Gruppenmitgliedern in Consistent Time Ordering ankommen. Skizziert je ein <br>(fiktives) Beispiel für eine Gruppenkommunikation mit mehreren Sendern, in dem Consistent Time Ordering der Nachrichten <br>a) sinnvoll wäre (und ein schwächeres Verfahren nicht ausreichen würde), <br>b) nicht ausreichen würde (also ein noch stärkeres Ordnungskritierium der Nachrichten erforderlich wäre).<br>(2 Punkte)</p>";
@@ -135,7 +170,92 @@
                             taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
                             taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn03.pdf' type='application/pdf'>";
                         }
-                    
+
+                        // ÜBUNG 4
+                        else if (exercise.querySelector('span').innerText === "Übung 4" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: Eine Anwendung produziert einen regelmäßigen Datenstrom (alle t Mikrosekunden werden <br> n Bytes auf einmal produziert). Um höchstmögliche Interaktivität zu ermöglichen, müssen <br> die Informationen spätestens nach 100 Millisekunden beim Empfänger ankommen. <br>Die Übertragungsverzögerung beträgt je nach Stausituation im Netz 70 bis 80 Millisekunden.<br> Wie würde diese Anwendung von einer (ATM-ähnlichen) zellenorientierten Vermittlungstechnik<br> der folgenden Zellengrößen (zuzüglich 5 Bytes Header) Gebrauch machen<br> <br>a) 42 Bytes, <br>b) 290 Bytes, <br>wenn t und n die folgenden Werte hätten: <br>i) t = 125 und n =1(Audio) <br>ii) t = 40000 und n = 2500 (Video)? <br>Beurteilt die angegebenen Zellengrößen für die Fälle i) und ii): Welcher Prozentsatz der<br> insgesamt für den jeweiligen Datenstrom übertragenen Bytes wird für Nutzinformationen verwendet? <br>Welche Zellengröße wäre für die beiden betrachteten Szenarien jeweils optimal?<br>(3 Punkte)</p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/ba44f607c04a47d79b81/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 4" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: Eine fiktive Netzkopplung nutzt einen fiktiven Subnetztyp mit einer Paketgröße von 50<br> Bytes und eigenem Fragmentierungsmechanismus. In dieser Netzkopplung soll auf der<br> Basis von MPLS, IPv6 und UDP eine fiktive Anwendung aufgesetzt werden. <br>Um die erforderliche Anzahl der Pakete zu minimieren, sollen die IPv6- und UDP-Header dabei<br> soweit wie möglich reduziert werden (Header Compression).<br><br> a) Welche Felder können nach Einrichten des Label Switched Paths (LSP) eingespart werden, welche<br> dagegen nicht, wenn die LSPs Data-driven sind? Kurze Begründung.<br> b) Was wäre anders, wenn der LSP Topology-driven wäre?<br>(2 Punkte)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/ba44f607c04a47d79b81/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                        } 
+
+                        // ÜBUNG 5
+                        else if (exercise.querySelector('span').innerText === "Übung 5" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: In einer fiktiven Anwendung möchte ein Sender zu den in der folgenden Tabelle angegebenen<br> Zeitpunkten die jeweils angegebene Datenmenge absenden.<br></p><img src='src/img/ueb5_bild1.png' alt='Bildbeschreibung'><p>Bemerkungen:<br> − Ihr könnt vereinfacht davon ausgehen, dass diese Umformung für die Anwendung<br> keine Probleme darstellt und beliebige, im Rahmen des Traffic-Shaping-Verfahrens<br> zulässige Paketgrößen geformt werden können.<br> − Die zu sendenden Informationen sollen immer so früh wie möglich abgesendet werden.<br> − Notiert auch, welche Informationen des Ausgabestroms zu welchem ursprünglichen<br> Paket gehören.<br>(2 Punkte) </p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/a0549a8fb2744073af3a/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn05.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 5" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: In einem fiktiven Glasfasernetz wird IntServ eingesetzt.</p><img src='src/img/ueb5_bild2.png' alt='Bildbeschreibung'><p>Nach Aufsetzen einer Reservierung mit den oben angegebenen Parametern und maximal<br> gefülltem Token Bucket startet der Sender mit einem Burst von 5MB.<br> Wann sind diese Informationen vermutlich vollständig beim Empfänger <br>angekommen (ab Startpunkt des Sendens)?<br>(1 Punkt) </p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/a0549a8fb2744073af3a/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn05.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 5" && subExercise.innerText === "Aufgabe 3") {
+                            taskDescription.innerHTML = "<p>Aufgabe 3: In einem fiktiven Netz wird ein DiffServ-ähnliches Verfahren eingesetzt.<br> Darin können Datenpakete fester Größe übertragen werden, die mit einem von sechs verschiedenen<br> DSCPs (Differentiated Services Code Points) ausgezeichnet sind (a,b,c,d,e,f). <br>Die DSCPs werden in einem Router auf die folgenden PHBs (Per Hop Behaviors) abgebildet:<br><br> a Alle Pakete müssen ankommen; eine Verzögerung von 1 Zeitintervall ist o. k. (aber nicht mehr).<br> b Die Pakete werden mit maximal 2 Zeitintervallen Verzögerung weitergeleitet. Zuverlässigkeit ist gewünscht, <br>aber nicht zwingend erforderlich.<br>c Die Pakete werden immer direkt (d. h. ohne zusätzliche Verzögerung) weitergeleitet.<br> Sollte das gerade nicht gehen, werden sie verworfen.<br> d Alle Pakete müssen ankommen, aber die Verzögerung spielt keine Rolle.<br> e Wie b, aber mit geringerer Priorität.<br> f Die Pakete werden nach dem Best-Effort-Prinzip behandelt.<br><br>Der Router hat Pufferplatz für 3 Pakete.<br> Auf den drei Eingabe-Ports liegen die nachfolgend angegebenen Paketströme an, die alle<br> auf denselben Ausgabe-Port weitergeleitet werden sollen (die verwendeten Paketbezeichner<br> in der Tabelle enthalten zur eindeutigen Kennzeichnung jeweils Eingabeport, Zeitpunkt und DSCP).<br></p><img src='src/img/ueb5_bild3.png' alt='Bildbeschreibung'><p>Wie sieht der Ausgabestrom aus? Sind die Anforderungen erfüllbar? Begründung.<br> Hinweis: Die Entscheidungen für das Weiterleiten vs. Puffern vs. Verwerfen werden direkt getroffen,<br> also sobald die betreffenden Pakete an den Eingabe-Ports anliegen. <br>(2 Punkte) </p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/a0549a8fb2744073af3a/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn05.pdf' type='application/pdf'>";
+                        } 
+
+                        // ÜBUNG 6
+                        else if (exercise.querySelector('span').innerText === "Übung 6" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: Angenommen, Chile will ein eigenes Satellitennetz für Telefonie aufbauen. <br>Würdet Ihr Euch eher für ein System auf Basis von geostationären Satelliten oder für ein<br> LEO-System entscheiden? Begründung. <br>(1 Punkt)</p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/adf909e713ba4ae895bd/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn06.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 6" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: Hätte Leonardo da Vinci nicht immer gewußt, wo er gerade ist,<br> hätte er sich womöglich folgendes System ausgedacht: <br>Die Glocken der drei nächstgelegenen Kirchtürme (K1, K2, K3) <br>haben unterschiedliche Tonhöhen und beginnen präzise dann zu schlagen, wenn von<br> einem vierten Turm ein roter Ball heruntergeworfen wird (:-)). <br>Dies geschieht jede Viertelstunde. (Vereinfachte Annahme: Die Schallgeschwindigkeit beträgt 339 m/s.)<br> Die Kirchtürme befinden sich (gemäß des landkarteneigenen Koordinatensystems) an den Positionen<br> K1: (11,2), K2: (21,7) und K3: (8,12) — Angaben in Kilometern.<br> Eines Tages ermittelt ein eigens dafür gebauter Empfänger folgende Abstände zwischen<br> dem Einsetzen der Glocken (:-)):</p><img src='src/img/ueb6_bild1.png' alt='Bildbeschreibung'><p>a) Wo befindet sich der Empfänger in etwa? Kurze Begründung.<br> b) Welche Probleme hat dieses System?<br> c) Warum hat GPS diese Probleme nicht bzw. nicht in gleichem Maße? <br>(3 Punkte)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/adf909e713ba4ae895bd/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn06.pdf' type='application/pdf'>";
+                        }
+
+                        // ÜBUNG 7
+                        else if (exercise.querySelector('span').innerText === "Übung 7" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: In einem fiktiven Funk-Netz wird Interleaving mit den folgenden Eigenschaften betrieben:<br> Alle Informationseinheiten werden in drei gleichgroße Teile aufgeteilt; ein ebenso so<br> großer XOR-Wert wird hinzugefügt. Diese vier Teile werden bei der Übertragung jeweils<br> auf vier aufeinander folgende Zeitslots verteilt (siehe VL-Folien dazu).<br> In einer auf diese Weise gebildeten Verbindung mit der Länge von 20 Zeitslots werden bei <br>der Übertragung die Slots 3, 7, 10 und 12 gestört.<br><br>a) Können die übertragenen Informationen beim Empfänger komplett rekonstruiert werden? <br>Wenn ja, wie gelingt dies? Wenn nein, was ist rekonstruierbar, was geht verloren? Kurze Begründung. <br>b) Welche Nachteile hat dieses Verfahren? <br>(2 Punkte)</p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/4922616a311a4014b120/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn07.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 7" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: Wie viele Telefon-Gespräche mit dem Festnetz kann man in einer maximal ausgebauten<br> GSM-Zelle des in der Vorlesung vorgestellten 900 MHz-Bandes gleichzeitig betreiben?<br> Wie viele Gespräche kann man gleichzeitig innerhalb dieser Zelle betreiben? Kurze Begründung.<br> (2 Punkte)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/4922616a311a4014b120/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn07.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 7" && subExercise.innerText === "Aufgabe 3") {
+                            taskDescription.innerHTML = "<p>Aufgabe 3: Eine Mobilstation bewegt sich wie in der Grafik auf der nächsten Seite angedeutet durch<br> eine Gruppe von GSM-Zellen aus drei Location Areas. <br>In Zelle a7 gibt es einen eingehenden Ruf, der in Zelle b4 beendet ist. <br>Weitere Kommunikationbeziehungen mit anderen Endsystemen gibt es im fraglichen Zeitraum nicht. <br>Wieviele Zellenwechsel müssen verbucht werden? Begründung.<br> (1 Punkt)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/4922616a311a4014b120/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn07.pdf' type='application/pdf'>";
+                        }
+
+                        // ÜBUNG 8
+                        else if (exercise.querySelector('span').innerText === "Übung 8" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: Welche Entscheidung bezüglich der LTE-Frequenzen muss bei der Entwicklung eines <br>LTESmartphones getroffen werden? <br>Recherchiert, wie diese Entscheidung bei Euren Smartphones ausgefallen ist.<br> (1 Punkt)</p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/737a7a5651f44feea7d8/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn08.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 8" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: Warum wird für die Umsetzung von unterschiedlich priorisierten Informationsströmen<br> innerhalb einer WLAN-Zelle nicht DiffServ verwendet? <br>Wie könnte es stattdessen realisiert werden?<br> (2 Punkte)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/737a7a5651f44feea7d8/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn08.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 8" && subExercise.innerText === "Aufgabe 3") {
+                            taskDescription.innerHTML = "<p>Aufgabe 3: Welche maximale Netto-Datenrate kann eine Station in einem Bluetooth1-Piconet <br>in etwa erreichen? Begründung. <br>(1 Punkt)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/737a7a5651f44feea7d8/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn08.pdf' type='application/pdf'>";
+                        }
+
+                        // ÜBUNG 9
+                        else if (exercise.querySelector('span').innerText === "Übung 9" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: </p><img src='src/img/ueb3_bild1.png' alt='Bildbeschreibung'><p> </p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 9" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: </p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 9" && subExercise.innerText === "Aufgabe 3") {
+                            taskDescription.innerHTML = "<p>Aufgabe 3: </p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 9" && subExercise.innerText === "Aufgabe 4") {
+                            taskDescription.innerHTML = "<p>Aufgabe 4: </p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                        }
         
                         // Um sicherzustellen, dass die Details sichtbar sind
                         document.querySelector('.task-details').style.display = 'block';
