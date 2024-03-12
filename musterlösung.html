@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Musterlösung Übungen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <div class="left">
+                <a href="index.html"><h1>RNMN</h1></a>
+            </div>
+            <div class="right">
+                <a href="fragen.html">Fragen</a>
+                <a href="videos.html">Links</a>
+                <a href="musterlösung.html">Musterlösung</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+        <ul id="uebung-liste">
+            <li class="uebung-nummer"><span>Übung 1</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                    <li class="aufgaben-nummer">Aufgabe 3</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 2</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 3</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                    <li class="aufgaben-nummer">Aufgabe 3</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 4</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                    <li class="aufgaben-nummer">Aufgabe 3</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="task-details">
+            <div class="task-description">
+                <p>Hier ist die Beschreibung der Aufgabe.</p>
+            </div>
+            <div class="pdf-container">
+                <div class="task-image">
+                    <!-- <embed style="height: 32rem; width: 32rem;" src="https://seafile.zfn.uni-bremen.de/f/e021daf1da394063baf2/?dl=2" type="application/pdf"> -->
+                    <embed style="height: 32rem; width: 32rem;" src="#" type="application/pdf">
+                </div>
+                <div class="task-image-abgabe">
+                    <embed style="height: 32rem; width: 32rem;" src="https://drive.google.com/file/d/1XNrqTSssX5nOUmsziaHkv3rfuwG7C2Q0/view?usp=sharin" type="application/pdf">
+                </div>
+            </div>
+            <div id="placeholder-div"></div>
+
+        </div>
+
+
+
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Klickereignis für das Ein- und Ausklappen der Aufgaben
+                const exercises = document.querySelectorAll('.uebung-nummer');
+        
+                exercises.forEach(function (exercise) {
+                    const subExercises = exercise.querySelector('.aufgaben-liste');
+        
+                    exercise.addEventListener('click', function () {
+                        subExercises.classList.toggle('show');
+                    });
+                });
+        
+                // Klickereignis für das Anzeigen der Beschreibungen
+                const subExercises = document.querySelectorAll('.aufgaben-nummer');
+        
+                subExercises.forEach(function (subExercise) {
+                    subExercise.addEventListener('click', function (event) {
+                        // Stoppen Sie das Klickereignis für die Aufgaben, damit es nicht das Klickereignis für die Übungen auslöst
+                        event.stopPropagation();
+        
+                        // Hier die Logik für das Anzeigen der Aufgabenbeschreibung und des Bildes einfügen
+                        const taskDescription = document.querySelector('.task-description');
+                        const taskImage = document.querySelector('.task-image');
+                        const taskImageAbgabe = document.querySelector('.task-image-abgabe');
+        
+                        // Suche nach dem übergeordneten Übungselement des geklickten Aufgaben-Elements
+                        const exercise = subExercise.closest('.uebung-nummer');
+        
+                        // ÜBUNG 1
+                        if (exercise.querySelector('span').innerText === "Übung 1" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: In einem fiktiven Netztyp bietet eine technische Weiterentwicklung eine gegenüber der Originalversion<br> verzehnfachte Datenrate an. Inwiefern wirkt sich dies auf die Paketlaufzeiten aus: <br>Was ändert sich? Was bleibt unverändert? Kurze Begründung.</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/e021daf1da394063baf2/?dl=2' type='application/pdf'>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn01.pdf' type=''>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 1" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: In einer fiktiven Gruppenkommunikation soll ein asymmetrisches Verschlüsselungsverfahren für die <br>Authentisierung der Nachrichten verwendet werden. Wäre dies ein Problem? Begründung.</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/e021daf1da394063baf2/?dl=2' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 1" && subExercise.innerText === "Aufgabe 3") {
+                            taskDescription.innerHTML = "<p>Aufgabe 3: In einer fiktiven Gruppenkommunikation wird die folgende IPv4-Adresse verwendet: 228.058.214.102.<br>a) Wie sieht die zugehörige Ethernet-Gruppenadresse aus?<br>b) Auf welche Weise könnte sich die zugrundeliegende Adressabbildung als suboptimal herausstellen? <br>Wie kann man damit umgehen?</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/e021daf1da394063baf2/?dl=2' type='application/pdf'>";
+
+                        // ÜBUNG 2
+                        } else if (exercise.querySelector('span').innerText === "Übung 2" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: Gegeben sei die nachfolgend angegebene einfache Netzkopplung mit den ebenfalls angegebenen (stark vereinfachenden) Verzögerungszeiten (in Millisekunden) in den Netzen (einschließlich Verarbeitung in den Routern). Die Netze, an denen die Hosts A bis I hängen, seien lokale, niedrig belastete Broadcast-Netze, so daß vereinfachend eine Verzögerungszeit von 0 Millisekunden angenommen wurde.</p><img src='src/img/ueb2_bild1.png' alt='Bildbeschreibung'><p>Zum Zeitpunkt t =0 fängt A an, mit einer kontinuierlichen Übertragungsrate von 1 MBit/s<br> auf der Gruppenadresse X zu senden. 100 Millisekunden später teilen die Hosts B, E, H<br> und I ihrem ,,lokalen‘‘ Router per IGMP erstmalig mit, daß sie an Informationen der<br> Gruppe X interessiert sind. Die erstmaligen IGMP-Pakete von Host B und Host H gehen<br> verloren. IGMP-Pakete werden alle 100ms wiederholt. Die anderen Hosts haben kein Interesse. <br>Das gewählte Multicast-Routing-Protokoll sei DVMRP. <br><br>a) Welche Informationen über Gruppenzugehörigkeiten fließen zwischen welchen Routern der angegebenen Netzkopplung? Kurze Begründung. <br>b) Welchen Anteil der von A gesendeten Informationen erhalten B, E, H und I jeweils? Kurze Begründung. <br>c) Welche Anteile des Informationsstroms von A werden unnötigerweise durch welche Teile der Netzkopplung geschoben? Kurze Begründung. <br>d) Welchen Anteil der von A gesendeten Informationen erhält jedes einzelne Gruppenmitglied von X, wenn man stattdessen MOSPF (Multicast Open Shortest Path First) verwenden würde? Kurze Begründung. <br>e) Welchen Anteil der von A gesendeten Informationen erhält jedes einzelne Gruppenmitglied von X, wenn man stattdessen PIM-SM ohne Optimierungen mit R2 als Rendezvous-Point verwenden würde? Kurze Begründung</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/f2446e4cd1024eb2b54e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn02.pdf' type='application/pdf'>";
+                        }
+                        // ÜBUNG 3
+                          else if (exercise.querySelector('span').innerText === "Übung 3" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: In zuverlässigen Multicast-Transport-Protokollen wird nicht selten sichergestellt, dass die <br> Nachrichten bei den Gruppenmitgliedern in Consistent Time Ordering ankommen. Skizziert je ein <br>(fiktives) Beispiel für eine Gruppenkommunikation mit mehreren Sendern, in dem Consistent Time Ordering der Nachrichten <br>a) sinnvoll wäre (und ein schwächeres Verfahren nicht ausreichen würde), <br>b) nicht ausreichen würde (also ein noch stärkeres Ordnungskritierium der Nachrichten erforderlich wäre).<br>(2 Punkte)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn03.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 3" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: In einer fiktiven Anwendung wird MTP als zuverlässiges Multicast-Transport-Protokoll verwendet. <br>Station A sendet eine MTP-Nachricht an ihre Gruppenmitglieder. <br>Wie erfährt A, dass die Nachricht komplett verloren gegangen ist? <br>(1 Punkt)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn03.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 3" && subExercise.innerText === "Aufgabe 3") {
+                            taskDescription.innerHTML = "<p>Aufgabe 3: In einem fiktiven Anwendungsprotokoll wird eine Folge von ASCII-Schriftzeichen<br> (Bit8=0) als Paketstrom mit jeweils vier Byte Nutzinformation pro Paket übertragen. <br>Nach vier solchen Paketen folgt ein weiteres mit Redundanz-Information (der bitweise ExklusivOder-Wert der Nutzpakete). <br>Der Empfänger erhält die folgende Paketfolge (die Bitfolgen sind — entgegen der typischen Übertragungsreihenfolge — mit MSB-first angegeben worden).<br>a) Was hat der Sender wohl ursprünglich mitteilen wollen? Kurze Begründung.</p><img src='src/img/ueb3_bild1.png' alt='Bildbeschreibung'><p>b) Unter welchen Bedingungen ist das verwendete Redundanzverfahren einsetzbar?<br>(2 Punkte)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn03.pdf' type='application/pdf'>";
+                        }
+                    
+        
+                        // Um sicherzustellen, dass die Details sichtbar sind
+                        document.querySelector('.task-details').style.display = 'block';
+                    });
+                });
+            });
+        </script>
+        
+        
+    </div>
+
+</body>
+
+</html>

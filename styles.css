@@ -81,7 +81,6 @@ a {
 .navbar {
     background-color: #f2f2f2;
     margin-bottom: 10rem;
-
 }
 
 .container {
@@ -249,6 +248,7 @@ li:nth-child(3n - 1)::marker {
     left: 12%;
     top: 10%;
     display: flex;
+    align-items: flex-start;
 
 }
 
@@ -300,11 +300,47 @@ li:nth-child(3n - 1)::marker {
 .task-details {
     display: none;
     margin-top: 2rem;
-    margin-left: 10rem;
+    margin-left: 5rem;
 }
 .task-description p {
     font-weight: bold;
 }
 .task-image img {
     max-width: 100%;
+}
+
+.task-image {
+    display: block;
+}
+
+.task-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: -10px; 
+}
+
+.task-image,
+.task-image-abgabe {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: calc(50% - 5px);
+    width: 100%;
+}
+
+.pdf-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shared-file-view-head h2 {
+    display: none;
+}
+
+
+#placeholder-div {
+    height: 10rem;
 }
