@@ -86,6 +86,19 @@
                     <li class="aufgaben-nummer">Aufgabe 4</li>
                 </ul>
             </li>
+            <li class="uebung-nummer"><span>Übung 10</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                </ul>
+            </li>
+            <li class="uebung-nummer"><span>Übung 11</span>
+                <ul class="aufgaben-liste">
+                    <li class="aufgaben-nummer">Aufgabe 1</li>
+                    <li class="aufgaben-nummer">Aufgabe 2</li>
+                    <li class="aufgaben-nummer">Aufgabe 3</li>
+                </ul>
+            </li>
         </ul>
 
         <div class="task-details">
@@ -240,21 +253,47 @@
 
                         // ÜBUNG 9
                         else if (exercise.querySelector('span').innerText === "Übung 9" && subExercise.innerText === "Aufgabe 1") {
-                            taskDescription.innerHTML = "<p>Aufgabe 1: </p><img src='src/img/ueb3_bild1.png' alt='Bildbeschreibung'><p> </p>"; 
-                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
-                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                            taskDescription.innerHTML = "<p>Aufgabe 1: Mit dem aus dem IoT-Umfeld bekannten Routing-Protokoll RPL (Routing Protocol for Low<br> Power and Lossy Networks) kann auch ein Multicast-Routing realisiert werden.<br> An welche am Anfang des Semesters vorgestellten Multicast-Routing-Verfahren erinnern<br> die dabei verwendeten Lösungsansätze<br><br> a) im Storing-Mode bzw. <br>b) im Non-Storing-Mode?<br> Kurze Begründung.<br> (2 Punkte) </p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/12eb1f2c9e274e67821e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn09.pdf' type='application/pdf'>";
                         } else if (exercise.querySelector('span').innerText === "Übung 9" && subExercise.innerText === "Aufgabe 2") {
-                            taskDescription.innerHTML = "<p>Aufgabe 2: </p>";
-                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
-                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                            taskDescription.innerHTML = "<p>Aufgabe 2: Ein fiktiver Anwendungsdienst arbeitet mit UTF8-Kodierung. Ein Empfänger erhält folgenden <br>Bytestrom (entgegen der in Netzen üblichen LSB-first-Bitorder in MSB-first angegeben):<br><br>10111100 01110000 01110000 01101001 01100111<br><br> Ist die Nachricht vollständig empfangen worden? Kurze Begründung. <br>Was wollte der Sender vermutlich mitteilen?<br> (1 Punkt)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/12eb1f2c9e274e67821e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn09.pdf' type='application/pdf'>";
                         } else if (exercise.querySelector('span').innerText === "Übung 9" && subExercise.innerText === "Aufgabe 3") {
-                            taskDescription.innerHTML = "<p>Aufgabe 3: </p>";
-                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
-                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                            taskDescription.innerHTML = "<p>Aufgabe 3: Welche Farbe haben Rapsblüten in blauem Licht? Kurze Begründung.<br> (1 Punkt)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/12eb1f2c9e274e67821e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn09.pdf' type='application/pdf'>";
                         } else if (exercise.querySelector('span').innerText === "Übung 9" && subExercise.innerText === "Aufgabe 4") {
-                            taskDescription.innerHTML = "<p>Aufgabe 4: </p>";
-                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/211bc1fe4fd84f49b134/?dl=2' type=''>";
-                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn04.pdf' type='application/pdf'>";
+                            taskDescription.innerHTML = "<p>Aufgabe 4: Ein Fax-Gerät erhält folgenden (stark gekürzten) zweidimensionalen Bild-Code — vereinfachend<br> nicht binär, sondern über Codeworte angegeben.<br> Jede Zeile beschreibt eine Rasterzeile.<br></p><img src='src/img/ueb9_bild1.png' alt='Bildbeschreibung'><p>(2 Punkte)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/12eb1f2c9e274e67821e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn09.pdf' type='application/pdf'>";
+                        }
+
+                        // ÜBUNG 10
+                        else if (exercise.querySelector('span').innerText === "Übung 10" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: In einer fiktiven Video-Übertragung wird H.261 als Kodierungsverfahren verwendet, wobei<br> jedes Paket (vereinfachend) genau ein Video-Frame enthält. <br>Bei Paket 1 handelt es sich um ein I-Frame, alle weiteren Pakete sind (vereinfachend) P-Frames. <br>Bei der Übertragung geht mitten im Strom ein Paket verloren.<br> Daher soll bei der Anzeige einfach das vorige Frame erneut abgespielt werden.<br><br> a) Welchen Effekt könnte das bei der Anzeige des Videos beim Empfänger haben, wenn<br> es sich um ein Video-Telefonat handelt?<br> b) Könnte der Effekt anders aussehen, wenn es sich bei dem übertragenen Video um einen<br> Spielfilm handeln würde?<br> Kurze Begründung.<br> (2 Punkte)</p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/3dcf26ba81744b80a85e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn10.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 10" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: Eine fiktive Audio-Anwendung soll einen Frequenzbereich von 100 Hz bis 4,8 kHz unterstützen.<br> Für die RTP-basierte Übertragung wird der folgende Protokollstack verwendet.<br> Das verwendete fiktive Funknetz arbeitet mit Paketen von 100 Bytes Gesamtlänge, davon<br> 10 Bytes Header. Die RTP-Pakete haben einen minimalen Header (von 12 Bytes). <br>IPOptionen, IP-Fragmentierung und Header Compression werden nicht verwendet. <br>Für den Paket-Strom dieser Anwendung stehen insgesamt 80 kbit/s zur Verfügung.<br></p><img src='src/img/ueb10_bild1.png' alt='Bildbeschreibung'><p><br>a) Welche Abtastrate sollte das fiktive Audio-Kodierungsverfahren verwenden?<br> b) Das fiktive Audio-Kodierungsverfahren verwendet ein DPCM-Verfahren. <br>Wieviele Bits stehen für die einzelnen Abtastwerte zur Verfügung?<br> c) Wie gut funktioniert dieses Verfahren bei Paketverlusten?<br> Jeweils mit kurzer Begründung.<br> (3 Punkte) </p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/3dcf26ba81744b80a85e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn10.pdf' type='application/pdf'>";
+                        }
+
+                        // ÜBUNG 11
+                        else if (exercise.querySelector('span').innerText === "Übung 11" && subExercise.innerText === "Aufgabe 1") {
+                            taskDescription.innerHTML = "<p>Aufgabe 1: Entwerft basierend auf den Prinzipien des Pagoda-Broadcastings einen optimierten Sendeplan für <br>das Broadcasting dreier Medienströme (Strom A: 30 min, Strom B: 165 min, Strom C: 75 min)<br> auf der Grundlage von insgesamt 7 Kanälen gleicher Übertragungsrate.<br>Empfängersysteme können alle Kanäle gleichzeitig empfangen (und ggf. speichern). <br>Der Einstieg in den letztlich gewählten Strom soll zu Beginn jedes Blocks möglich sein.<br> Skizziert Euren Sendeplan.<br> Wie lang ist die maximale Wartezeit? Kurze Begründung.<br> (2 Punkte)</p>"; 
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/b6058c667eff4b60ab4e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn11.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 11" && subExercise.innerText === "Aufgabe 2") {
+                            taskDescription.innerHTML = "<p>Aufgabe 2: Was entspricht bei einem SSM-basierten Videovortrag dem konkreten ,,Ort“ des Vortrags?<br> (1 Punkt)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/b6058c667eff4b60ab4e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn11.pdf' type='application/pdf'>";
+                        } else if (exercise.querySelector('span').innerText === "Übung 11" && subExercise.innerText === "Aufgabe 3") {
+                            taskDescription.innerHTML = "<p>Aufgabe 3: Anna will ein SIP-basiertes VoIP-Telefonat mit Hugo führen, dessen VoIP-Telefon sich in<br> seinem NAT -abgegrenzten Heimnetz befindet.<br> a) Welche Schritte sind erforderlich, damit der NAT vor Hugos Heimnetz von dem Anruf<br> aufgefunden werden kann?<br> b) Inwiefern könnte der NAT das Erreichen von Hugos VoIP-Telefon noch verhindern,<br> und wie sieht eine mögliche Lösung für dieses Problem aus?<br> (2 Punkte)</p>";
+                            taskImage.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='https://seafile.zfn.uni-bremen.de/f/b6058c667eff4b60ab4e/?dl=2' type=''>";
+                            taskImageAbgabe.innerHTML = "<embed style= 'height: 36rem; width: 36rem;'src='src/rnmn11.pdf' type='application/pdf'>";
                         }
         
                         // Um sicherzustellen, dass die Details sichtbar sind

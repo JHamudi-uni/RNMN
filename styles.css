@@ -261,6 +261,15 @@ li:nth-child(3n - 1)::marker {
     width: 20rem;
 }
 
+#fragen-liste {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-left: 20px; /* Abstand zur linken Seite anpassen */
+    width: 50rem;
+}
+
 .uebung-nummer {
     cursor: pointer;
     list-style-type: none;
@@ -269,11 +278,32 @@ li:nth-child(3n - 1)::marker {
     box-shadow: none;
 }
 
+.fragen-liste-nummer {
+    cursor: pointer;
+    list-style-type: none;
+    width: 760px; /* Breite der Übungen anpassen */
+    margin-bottom: 20px; /* Abstand zwischen den Übungen anpassen */
+    box-shadow: none;
+}
+
 .uebung-nummer span:hover {
     color: skyblue;
 }
 
+.fragen-liste-nummer span:hover {
+    color: skyblue;
+}
+
+
 .aufgaben-liste {
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-shadow: none;
+}
+
+.fragen {
     display: none;
     padding: 0;
     margin: 0;
@@ -287,14 +317,34 @@ li:nth-child(3n - 1)::marker {
     margin-left: 2rem;
 }
 
+.fragen-nummer {
+    cursor: pointer;
+    width: 43rem;
+    font-weight: 400;
+    margin-left: 2rem;
+}
+
 .aufgaben-liste.show {
     display: block;
     
 }
 
+.fragen.show {
+    display: block;
+}
+
 .aufgaben-nummer:hover {
     font-weight: 700;
 }
+
+.fragen-nummer:hover {
+    font-weight: 700;
+}
+
+.fragen-liste-nummer.hover {
+    font-weight: 700;
+}
+
 
 /* CSS für die Aufgabenbeschreibung und das Bild */
 .task-details {
@@ -305,6 +355,12 @@ li:nth-child(3n - 1)::marker {
 .task-description p {
     font-weight: bold;
 }
+
+.task-description-fragen p {
+    font-weight: bold;
+    color: rgb(165 100 255);
+}
+
 .task-image img {
     max-width: 100%;
 }
